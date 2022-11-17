@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container > div {
+            margin-bottom: 200px;
+            width: 500px;
+            height: 500px;
+        }
+
+        .box1 {
+            /* 从#d70a1a到#008过渡 */
+            background: linear-gradient(#d70a1a, #008);
+        }
+
+        .box2 {
+            background: linear-gradient(to left, red, yellow, orange);
+        }
+
+        .box3 {
+            background: linear-gradient(to right, black, orange, gray);
+            /* 从右到左，从黑色到橙色到灰色过渡 */
+        }
+
+        .box4 {
+            background: linear-gradient(45deg, blue, #d90000);
+            /* 45度倾斜 从蓝色到#d90000过渡  */
+        }
+
+        .box5 {
+            background: linear-gradient(90deg, red 5%, yellow 20%, green 50%, blue 80%);
+            /* 90度倾斜，从从红色开始渐变  从%5开始渐变，从20%开始渐变到黄色，从50开始渐变绿色，从80开始渐变蓝色 */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</div>
+
+</body>
+</html>
