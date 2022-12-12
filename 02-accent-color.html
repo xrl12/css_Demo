@@ -4,29 +4,15 @@
     <meta charset="UTF-8">
     <title>02-accent-color</title>
     <style>
-        .input1 {
-            accent-color: green;
-        }
-
-        .input2 {
-            accent-color: grey;
-        }
-
-        .input3 {
-            accent-color: antiquewhite;
-        }
-
-        progress {
-            accent-color: blueviolet;
+        div {
+            width: 200px;
+            height: 200px;
+            clip-path:  path('M 0 200 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z');
+            background-color: red;
         }
     </style>
 </head>
 <body>
-<input type="checkbox" class="input1"></input>
-
-<input type="radio" class="input2"></input>
-<input type="range" class="input3"></input>
-
-<progress></progress>
+<div></div>
 </body>
 </html>

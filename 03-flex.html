@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*.container {*/
+        /*    display: flex;*/
+        /*    !*height: 150px;*!*/
+        /*}*/
+
+        /*.container > div {*/
+        /*    width: 100px;*/
+        /*    !*height: 150px;*!*/
+        /*    !*background-color: grey;*!*/
+        /*}*/
+
+        /*.container > div:last-child {*/
+        /*    height: 200px;*/
+        /*}*/
+
+        /*.container1 {*/
+        /*    display: flex;*/
+        /*    width: 1000px;*/
+        /*    flex-wrap: wrap;*/
+        /*}*/
+
+        /*.container1 > .box {*/
+        /*    width: 400px;*/
+        /*    height: 100px;*/
+        /*    margin-top: 20px;*/
+        /*}*/
+
+        /*.container1 :nth-child(odd) {*/
+        /*    background-color: red;*/
+        /*}*/
+
+        /*.container1 :nth-child(even) {*/
+        /*    background-color: blueviolet;*/
+        /*}*/
+
+        /*.container2 {*/
+        /*    display: flex;*/
+        /*    width: 1000px;*/
+        /*    flex-wrap: wrap;*/
+        /*}*/
+
+        /*.container2 > .box {*/
+        /*    width: 400px;*/
+        /*    height: 100px;*/
+        /*    margin-top: 20px;*/
+        /*}*/
+
+        /*.container2 :nth-child(odd) {*/
+        /*    background-color: red;*/
+        /*}*/
+
+        /*.container2 :nth-child(even) {*/
+        /*    background-color: blueviolet;*/
+        /*}*/
+
+        .container3 {
+            display: flex;
+            width: 200px;
+        }
+
+        .container3 > div:first-child {
+            width: 20px;
+            background-color: red;
+        }
+
+        .container3 :nth-child(even) {
+            flex-basis: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+        .container3 :nth-child(odd) {
+            flex-basis: 100px;
+            height: 100px;
+            background-color: darkgreen;
+        }
+
+
+        .container4 {
+            display: flex;
+            width: 1000px;
+            height: 200px;
+        }
+
+        .container4 :nth-child(even) {
+            flex-grow: 2;
+            background-color: #d70a1a;
+        }
+
+        .container4 :nth-child(odd) {
+            flex-grow: 1;
+            background-color: darkgreen;
+        }
+
+        .container5 {
+            display: flex;
+            width: 400px;
+        }
+
+        .container5 > div {
+            width: 200px !important;
+            height: 100px;
+        }
+
+        .container5 :nth-child(even) {
+            /*width: 100px;*/
+            background-color: yellow;
+            flex-shrink: 1;
+        }
+
+        .container5 :nth-child(odd) {
+            /*width: 100px;*/
+            flex-shrink: 2;
+            background-color: aqua;
+        }
+
+        .container6 {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container6 > div {
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box2">3 <br/> 4 <br/> 5</div>
+</div>
+
+<h2>flex-wrap是nowrap(默认)</h2>
+<div class="container1">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<h2>flex-wrap是wrap</h2>
+<div class="container2">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<h2>flex-basic</h2>
+<div class="container3">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<h2>flex-grow</h2>
+<div class="container4">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<h3>flex-shrink</h3>
+<div class="container5">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+
+<h3>flex-direction</h3>
+<div class="container6">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>
