@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<style>
+    .css-3d-btn {
+        position: relative;
+        color: rgba(255, 255, 255, 1);
+        text-decoration: none;
+        background-color: rgba(219, 87, 51, 1);
+        font-family: "Microsoft YaHei", 微软雅黑, 宋体;
+        font-weight: 700;
+        font-size: 3em;
+        display: block;
+        padding: 4px;
+        border-radius: 8px;
+        /* let's use box shadows to make the button look more 3-dimensional */
+        box-shadow: 0px 9px 0px rgba(219, 31, 5, 1), 0px 9px 25px rgba(0, 0, 0, .7);
+        margin: 100px auto;
+        width: 160px;
+        text-align: center;
+        -webkit-transition: all .1s ease;
+        -moz-transition: all .1s ease;
+        transition: all .1s ease;
+    }
+
+    /* now if we make the box shadows smaller when the button is clicked, it'll look like the button has been "pushed" */
+    .css-3d-btn:active {
+        box-shadow: 0px 3px 0px rgba(219, 31, 5, 1), 0px 3px 6px rgba(0, 0, 0, .9);
+        position: relative;
+        top: 6px;
+    }
+</style>
+<button class="css-3d-btn">提交</button>
+</body>
+</html>
