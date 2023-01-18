@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="js/css-doodle.js"></script>
+    <css-doodle grid="1x35" stule="width: 100%;">
+        :doodle{--s: 0}
+        :doodle {
+        grid-row-gap: 1px;
+        @size: 8em; /* width: 8em; height: 8em; */
+        }
+        background: #60569e;
+        width: @rand(5%, 100%); /* from 5% to 100% by random */
+    </css-doodle>
 </head>
 <body>
 
