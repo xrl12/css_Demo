@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-css-form-valid</title>
+    <style>
+        :root {
+            --error-font-color: red;
+            --error-font-size: 10px;
+        }
+
+        .form-item label {
+            display: inline-block;
+            width: 70px;
+            text-align: center;
+        }
+
+        .form-item input {
+            /*padding: 0;*/
+            margin-left: -5px;;
+        }
+
+        .form-btn-item {
+            margin-left: 70px;
+        }
+
+        .error_msg {
+            color: var(--error-font-color);
+            font-size: var(--error-font-size);
+        }
+
+        input + span {
+            display: none;
+        }
+
+
+        input[required]:empty + span {
+            display: none;
+        }
+
+        input[type='text']:invalid,
+        input[type='password']:invalid {
+            display: inline;
+        }
+
+        input[type='text']:focus:invalid + span {
+            display: inline;
+        }
+
+        input[type='password']:focus:invalid + span {
+            display: inline;
+        }
+
+        input[required]:invalid:not(:placeholder-shown) + span {
+            display: inline;
+        }
+
+        input[type='text']:invalid ~ button[type='submit'],
+        input[type='submit']:invalid ~ button[type='submit'] {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<form>
+    <!--    <div class="form-item">-->
+
+    <label for="phone">手机号：</label>
+    <input type="text" id="phone" placeholder="请输入手机号" pattern="1[3456789]\d{9}" required>
+    <span class="error_msg">请输入手机号</span>
+
+    <!--    </div>-->
+    <!--    <div class="form-item">-->
+    <label for="pwd">密码：</label>
+    <input type="password" id="pwd" placeholder="请输入密码" pattern="123456789" required>
+    <span class="error_msg">请输入密码</span>
+    <!--    </div>-->
+    <!--    <div class="form-btn-item">-->
+    <button type="submit" class="submit">提交</button>
+    <button type="reset">重置</button>
+    <!--    </div>-->
+
+</form>
+
+</body>
+</html>
