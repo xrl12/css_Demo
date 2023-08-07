@@ -217,3 +217,7 @@ where <side-or-corner> = [ left | right ] || [ top | bottom ]
 
 
 ![Screenshot2022-11-17 PM9.05.20](https://golanage.oss-cn-beijing.aliyuncs.com/css_demo/Screenshot2022-11-17%20PM9.05.20.png)
+
+
+
+## 实色过度，直接从一个颜色过度到另外一个颜色

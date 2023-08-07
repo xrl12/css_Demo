@@ -32,6 +32,7 @@
 
         .box4 {
             background: linear-gradient(45deg, blue, #d90000);
+            1123 321
             /* 45度倾斜 从蓝色到#d90000过渡  */
         }
 
@@ -39,15 +40,36 @@
             background: linear-gradient(90deg, red 5%, yellow 20%, green 50%, blue 80%);
             /* 90度倾斜，从从红色开始渐变  从%5开始渐变，从20%开始渐变到黄色，从50开始渐变绿色，从80开始渐变蓝色 */
         }
+
+        .box6 {
+            background: linear-gradient(to left, #fff 0%, #fff 50%, #f00 50%, #f00 100%);
+        }
+
+        .box7 {
+            /*background-color: red;*/
+            background: linear-gradient(135deg, transparent 15px, deeppink 0),
+            linear-gradient(-145deg, transparent 15px, deeppink 0),
+            linear-gradient(-45deg, transparent 15px, deeppink 0),
+            linear-gradient(45deg, transparent 15px, deeppink 0);
+            background-size: 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+            background-position: left top, right top, right bottom, left bottom;
+            background-repeat: no-repeat;
+        }
+
     </style>
 </head>
 <body>
 <div class="container">
+    <h1>渐变</h1>
     <div class="box1"></div>
     <div class="box2"></div>
     <div class="box3"></div>
     <div class="box4"></div>
     <div class="box5"></div>
+    <h1>实色</h1>
+    <div class="box6"></div>
+    <h1>多层渐变</h1>
+    <div class="box7"></div>
 </div>
 
 </body>
