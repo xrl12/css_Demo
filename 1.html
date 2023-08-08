@@ -1,102 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>button</title>
 
-        html,
-        body {
+    <style>
+        :root {
+            --global-btn-width: 100px;
+            --global-btn-height: 30px;
+            --global-btn-border-radius: 4px;
+            /*--global-btn-padding: 10px;*/
+        }
+
+        html, body {
             width: 100%;
             height: 100%;
             display: flex;
         }
 
-        .g-container {
-            position: relative;
-            width: 300px;
+        .container {
             margin: auto;
-            padding: 5px;
         }
 
-        .g-container::before {
-            content: "";
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            width: 100px;
-            background: linear-gradient(90deg, transparent, #fff);
-            pointer-events: none;
-        }
-
-        .g-container ul {
-            width: 300px;
-            display: flex;
-            flex-wrap: nowrap;
-            overflow-x: scroll;
-        }
-
-
-        .g-container ul li {
-            margin-right: 12px;
-            border-radius: 5px;
-            border: 1px solid #666;
-            padding: 4px;
+        button {
+            width: var(--global-btn-width);
+            height: var(--global-btn-height);
+            border-radius: var(--global-btn-border-radius);
+            /*padding: var(--global-btn-padding);*/
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
             cursor: pointer;
-            list-style: none;
         }
 
-
-        li:hover {
-            background: #666;
-            color: #fff;
+        button::before {
+            position: absolute;
+            content: "";
+            width: var(--global-btn-width);
+            height: 0;
+            border-radius: var(--global-btn-border-radius);
+            left: 0;
+            top: 0;
+            background: black;
+            transform: rotate(90deg);
+            transition: height 2s ease;
         }
 
-        ::-webkit-scrollbar {
-            display: none;
+        button:hover::before {
+            height: var(--global-btn-width);
+
         }
 
     </style>
 </head>
 <body>
-<div class="g-container">
-    <ul>
-        <li>Button</li>
-        <li>Button</li>
-        <li>Button</li>
-        <li>Button</li>
-        <li>Button</li>
-        <li>Button</li>
-        <li>Button</li>
-        <li>Button</li>
-        <li>Button</li>
-        <li>Button</li>
-        <li>Button</li>
-        <li>Button</li>
-    </ul>
+<div class="container">
+    <button>btn</button>
 </div>
-
-<!--<div class="container2">-->
-<!--    <ul style="display: flex; width: 100px;">-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--        <li>hello</li>-->
-<!--    </ul>-->
-<!--</div>-->
 
 </body>
 </html>
