@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        :root {
+            /*
+            用来放一些全局变量
+             */
+            --global-width: 300px;
+            --global-height: 20px;
+            --global-bg-color: #e5e50e;
+            --li-width: 50px;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .container {
+            width: var(--global-width);
+            height: var(--global-height);
+            position: relative;
+            margin: auto;
+        }
+
+        .container:before {
+            position: absolute;
+            display: block;
+            content: "";
+            background: linear-gradient(90deg, transparent, #fff);
+            pointer-events: none;
+            width: var(--li-width);
+            height: calc(var(--global-height) + 5px);
+            padding: 4px;
+            right: 0;
+            bottom: 0;
+            top: 0;
+        }
+
+        ul > li {
+            list-style: none;
+            margin-right: 10px;
+            cursor: pointer;
+            border: 1px solid #666;
+            text-align: center;
+            padding: 4px;
+            border-radius: 5px;
+        }
+
+        li:hover {
+            background-color: #666;
+            color: #fff;
+        }
+
+        ul {
+            display: flex;
+            width: var(--global-width);
+            padding: 0;
+            overflow-x: auto;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script>
+
+        const insert_li_to_ul = li_num => {
+            const ul = document.querySelector("ul");
+            for (let i = 0; i < li_num; i++) {
+                const li = document.createElement("li");
+                li.innerText = `Btn${i + 1}`
+                ul.appendChild(li)
+            }
+        }
+
+        window.onload = () => {
+            insert_li_to_ul(11)
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <ul></ul>
+</div>
+</body>
+</html>

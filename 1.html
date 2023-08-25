@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>button</title>
+
+    <style>
+        :root {
+            --global-btn-width: 100px;
+            --global-btn-height: 30px;
+            --global-btn-border-radius: 4px;
+            /*--global-btn-padding: 10px;*/
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .container {
+            margin: auto;
+        }
+
+        button {
+            width: var(--global-btn-width);
+            height: var(--global-btn-height);
+            border-radius: var(--global-btn-border-radius);
+            /*padding: var(--global-btn-padding);*/
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        button::before {
+            position: absolute;
+            content: "";
+            width: var(--global-btn-width);
+            height: 0;
+            border-radius: var(--global-btn-border-radius);
+            left: 0;
+            top: 0;
+            background: black;
+            transform: rotate(90deg);
+            transition: height 2s ease;
+        }
+
+        button:hover::before {
+            height: var(--global-btn-width);
+
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <button>btn</button>
+</div>
+
+</body>
+</html>
